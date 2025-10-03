@@ -1,34 +1,16 @@
 const display = document.getElementById("display");
 
-function opentodisplay(input) {
-  display.value += input;
-}
-
-function cleardisplay() {
-  display.value = "";
-}
-
-function ans() {
-  try {
-    display.value = eval(display.value);
-  } catch (error) {
-    display.value = "Error";
-  }
-}
-
-let realValue = ""; // আসল হিসাব রাখবে
+let realValue = ""; // Stores the actual input for evaluation
 
 function opentodisplay(input) {
   if (input === "/") {
-    display.value += "÷"; // ডিসপ্লেতে ÷ দেখাবে
-    realValue += "/"; // ভেতরে আসল ডিভিশন অপারেটর থাকবে
+    display.value += "÷";
+    realValue += "/";
   } else if (input === "*") {
-    display.value += "×"; // ডিসপ্লেতে × দেখাবে
+    display.value += "×";
     realValue += "*";
-  } else {
-  }
-  if (input === "**") {
-    display.value += "^"; // ডিসপ্লেতে × দেখাবে
+  } else if (input === "**") {
+    display.value += "^";z
     realValue += "**";
   } else {
     display.value += input;
@@ -43,10 +25,13 @@ function cleardisplay() {
 
 function ans() {
   try {
-    display.value = eval(realValue); // হিসাব আসল ভ্যালু দিয়ে হবে
-    realValue = display.value; // result নতুন input হবে
+    const result = eval(realValue);
+    display.value = result;
+    realValue = result.toString(); // Make the result the new input
   } catch (error) {
-    display.value = "Error";
+  display.value = "error";
     realValue = "";
   }
 }
+
+  
