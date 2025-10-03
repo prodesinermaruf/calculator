@@ -29,7 +29,7 @@ button:active {
 #display {
     width: 200px;
     padding: 15px;
-    margin-top: 20px;
+    margin: 0px auto;
     display: block;
     border: solid 10px rgba(34, 7, 7, 0.342);
     border-width: 27px;
@@ -58,5 +58,4 @@ body {
     background-attachment: fixed; /* স্ক্রল করলে background স্থির থাকবে */
     height: 100vh;  /* viewport height = 100% */
     margin: 0;
-
 }
