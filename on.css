@@ -41,6 +41,7 @@ button:active {
     background-color: rgba(184, 212, 212, 0.64);
     font-size: 22px;
     text-align: right;
+    margin-top: 10%;
 
 }
 
@@ -48,6 +49,7 @@ div {
     background: linear-gradient(135deg, rgba(60, 44, 8, 0.711), rgba(29, 51, 18, 0.703));
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    margin-bottom: 500%;
     border: solid 15px rgba(28, 23, 23, 0.2);
 }
 
@@ -58,4 +60,6 @@ body {
     background-attachment: fixed; /* স্ক্রল করলে background স্থির থাকবে */
     height: 100vh;  /* viewport height = 100% */
     margin: 0;
+  overflow: hidden;
+    
 }
